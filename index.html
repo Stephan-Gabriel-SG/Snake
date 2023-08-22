@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel= "icon"  href="favicon.png">
+        <title>Snake</title>
+    </head>
+    <body>
+        <nav>
+            <p>Snake</p>
+        </nav>
+        <div id='menu'>
+            <span id='bigTitle'>SNAKE 🐍</span>
+            <span id='indication'>choose level</span>
+            <div id='levelFrame'>
+                <button id='down'>
+                    <</button>
+                <span id='levelChoice'>Level 1</span>
+                    <button id='up'>></button>
+            </div>
+            <div id="instruction">
+                <div id="command">
+                    <span>Command</span>
+                    <button id="arrow_left">&#8592;</button>
+                    <button id="arrow_up">&#8593;</button>
+                    <button id="arrow_right">&#8594;</button>
+                    <button id="arrow_down">&#8595;</button>
+                </div>
+                <div id="speed">
+                    <span>Speed</span>
+                    <button>Ctrl</button>
+                </div>
+            </div>
+            <button id="play">Play</button>
+        </div>
+        <div id='gameFrame'>
+            <table>
+                <tr>
+                    <th>Level</th>
+                    <th colspan="2">score</th>
+                    <th>Time</th>
+                    <th>Goal (chicks)</th>
+                </tr>
+                <tr>
+                    <td id='level'></td>
+                    <td>🐥</td>
+                    <td id="score">0</td>
+                    <td id='time'></td>
+                    <td id='goal'></td>
+                </tr>
+            </table>
+            <span id='top'></span>
+            <canvas id="gameboard"></canvas>
+            <div>
+                <button id='btnMenu'>Menu</button>
+                <button id='pause'>Pause</button>
+            </div>
+            <div id='messageFrame'>
+                <span id='message'>Game Over</span>
+                <button id="tryAgain" class='tryAgain'>Try Again</button>
+                <button id="nextLevel" hidden>Continue</button>
+            </div>
+        </div>
+            <footer>
+                <label>
+                    &copy copyright <span id='date'></span>
+                    <script>
+                        let date = (new Date().getFullYear() == 2023) ? 2023 : (2023 + '-' + new Date().getFullYear());
+                        document.getElementById('date').textContent = ` ${date} `;
+                    </script>
+                    St&eacutephan Gabriel SG 
+                    <a href='https://github.com/Stephan-Gabriel-SG'>
+                        <img src='github.svg'>
+                    </a>
+                </label>
+            </footer>
+    </body>
+    <script type="text/javascript" src="js.js"></script>
+</html>
